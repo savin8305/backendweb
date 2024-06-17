@@ -5,7 +5,7 @@ const app = express();
 
 app.use(cors());
 app.use("/test",(req,res)=>{
-  res.send("i am from backend test")
+ console.log("i am from backend test")
 })
 app.get('/content/:lang', (req, res) => {
   const lang = req.params.lang;
