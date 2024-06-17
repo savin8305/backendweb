@@ -3,8 +3,11 @@ const cors = require('cors');
 const path = require('path'); // Ensure the correct path is used for language files
 const app = express();
 
-app.use(cors());
-app.use('/',()=>{
+app.use(cors({
+  credentials: true,
+  optionsSuccessStatus: 204, // 204 No Content is a common choice
+}));
+app.use('/test',(req,res)=>{
  console.log("i am from backend test")
 })
 app.get('/content/:lang', (req, res) => {
