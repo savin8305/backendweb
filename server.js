@@ -8,7 +8,7 @@ app.use(cors({
   optionsSuccessStatus: 204, // 204 No Content is a common choice
 }));
 app.use('/test',(req,res)=>{
- console.log("i am from backend test")
+ res.send("i am from backend test")
 })
 app.get('/content/:lang', (req, res) => {
   const lang = req.params.lang;
