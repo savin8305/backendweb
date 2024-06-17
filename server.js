@@ -4,7 +4,7 @@ const path = require('path'); // Ensure the correct path is used for language fi
 const app = express();
 
 app.use(cors());
-app.use("/test",(req,res)=>{
+app.use('/',()=>{
  console.log("i am from backend test")
 })
 // app.get('/content/:lang', (req, res) => {
